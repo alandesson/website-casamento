@@ -1,0 +1,17 @@
+{
+  "name": "wedding-site",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start:client": "npm --workspace client start",
+    "start:server": "npm --workspace server run dev",
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "install-all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
